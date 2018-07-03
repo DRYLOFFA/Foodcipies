@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Foodcipies.Foodcipies" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="24" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="Foodcipies" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="FavAct" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:name="md569b633dc15ca25c4a370c3ccaf3f008f.FavAct" />
+    <activity android:label="FavsPageAct" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:name="md569b633dc15ca25c4a370c3ccaf3f008f.FavsPageAct" />
+    <activity android:label="Foodcipies" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:name="md569b633dc15ca25c4a370c3ccaf3f008f.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md569b633dc15ca25c4a370c3ccaf3f008f.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Foodcipies.Foodcipies.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.Foodcipies.Foodcipies" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
